@@ -107,7 +107,7 @@ tolerations: []
 affinity: {}
 
 files:
-  foo: bar
+  foo: testvalue
 
 configMapName: nginx-config
 
