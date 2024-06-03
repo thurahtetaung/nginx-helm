@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ include "nginx-app.fullname" . }}
   annotations:
-    reloader.stakater.com/match: "true"
+    reloader.stakater.com/auto: "true"
   labels:
     {{- include "nginx-app.labels" . | nindent 4 }}
 spec:
