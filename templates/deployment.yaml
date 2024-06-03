@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "nginx-app.fullname" . }}
+  annotations:
+    reloader.stakater.com/match: "true"
   labels:
     {{- include "nginx-app.labels" . | nindent 4 }}
 spec:
