@@ -105,3 +105,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+files:
+  foo: bar
+
+configMapName: nginx-config
+
