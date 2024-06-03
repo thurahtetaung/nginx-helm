@@ -50,12 +50,13 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.volumeMounts }}
           volumeMounts:
-            - name: config-volume
-              mountPath: /data
+            - mountPath: /data
+              name: config-volume
       volumes:
-        - name: config-volume
-          configMap:
+        - configMap:
+            defaultMode: 420
             name: nginx-config
+          name: config-volume
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
